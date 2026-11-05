@@ -1,15 +1,17 @@
 :root {
-	--bgl-primary: #55604a;
-	--bgl-bg: #f3efe6;
-	--bgl-font-color: #241f18;
-	--bgl-muted: #6f6758;
-	--bgl-border-color: rgba(36, 31, 24, 0.1);
+	--bgl-primary: #d95f2b;
+	--bgl-bg: #161310;
+	--bgl-font-color: #f3ece2;
+	--bgl-muted: #a89c8e;
+	--bgl-border-color: rgba(243, 236, 226, 0.14);
 	--bgl-font-display: 'Fraunces', Georgia, serif;
 	--bgl-font: 'Hanken Grotesk', system-ui, sans-serif;
 	--bgl-font-size: 17px;
 	--bgl-btn-border-radius: 999px;
 	--bgl-input-border-radius: 12px;
 	--bgl-card-border-radius: 20px;
+	--bgl-btn-bg: #d95f2b;
+	--bgl-btn-color: #161310;
 }
 
 body {
@@ -58,7 +60,7 @@ a.bgl_btn {
 	font-weight: 500;
 	transition: background 0.18s ease;
 }
-a.bgl_btn:hover { background: #3a3126; }
+a.bgl_btn:hover { background: #ec7a47; }
 a.bgl_flatPill {
 	background: transparent;
 	color: inherit;
@@ -67,7 +69,7 @@ a.bgl_flatPill {
 
 .frame {
 	overflow: hidden;
-	background: #e9e3d6;
+	background: #241d18;
 	border-radius: 20px;
 	aspect-ratio: 1;
 }
@@ -78,14 +80,14 @@ a.bgl_flatPill {
 .stone > figure img { border-radius: 26px; display: block; }
 
 .panel {
-	background: #fbf8f1;
+	background: #201a16;
 	border: 1px solid var(--bgl-border-color);
 	border-radius: 20px;
 	padding: 1.6rem;
 }
 
-.band { background: #e7e1d2; }
-.band-deep { background: var(--bgl-primary); color: #f3efe6; }
+.band { background: #2a2119; }
+.band-deep { background: var(--bgl-primary); color: #161310; }
 
 .card-link { display: block; text-decoration: none; transition: transform 0.18s ease; }
 .card-link:hover { transform: translateY(-3px); }

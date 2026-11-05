@@ -48,9 +48,8 @@ const open = ref(false)
 				</router-link>
 				<nav class="desk-nav gap-1-5 align-items-center" aria-label="Pages">
 					<router-link v-for="link in data?.links?.length ? data.links : fallback.links" :key="link.to" :to="link.to" class="txt14 decoration-none">{{ link.label }}</router-link>
-					<a href="/en" class="txt14 decoration-none quiet">EN</a>
 				</nav>
-				<Btn class="mob-toggle" flat :icon="open ? 'close' : 'menu'" :aria-label="open ? 'Fermer le menu' : 'Ouvrir le menu'" @click="open = !open" />
+				<Btn class="mob-toggle" flat icon="menu" aria-label="Open menu" @click="open = !open" />
 			</div>
 			<nav v-if="open" class="px-2 py-1 border-top sans m_px-1" aria-label="Pages">
 				<router-link v-for="link in data?.links?.length ? data.links : fallback.links" :key="link.to" :to="link.to" class="flex space-between align-items-center py-075 decoration-none border-bottom" @click="open = false">
