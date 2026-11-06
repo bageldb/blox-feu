@@ -2,6 +2,7 @@
  * Prerender entry — used by blox-ssg at build time only.
  */
 import process from 'node:process'
+import { BLOX_LAYOUT_KEY } from '@bagelink/blox'
 import { createBloxSSREntry } from '@bagelink/blox/ssg'
 import { BagelVue, RouterWrapper } from '@bagelink/vue'
 import App from './App.vue'
@@ -26,4 +27,11 @@ export const { render } = createBloxSSREntry({
 	apiBase: process.env.BLOX_API_URL ?? process.env.BAGELINK_API_URL ?? 'https://api.bagel.to',
 	plugins: [[BagelVue, {}]],
 	globalComponents: { RouterWrapper },
+	setup: (app) => {
+		app.provide(BLOX_LAYOUT_KEY, {
+			ensureChrome: true,
+			navType: 'SiteHeader',
+			footerType: 'SiteFooter',
+		})
+	},
 })
