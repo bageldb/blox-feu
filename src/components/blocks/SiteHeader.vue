@@ -58,7 +58,7 @@ const themeCss = computed(() => {
 </script>
 
 <template>
-	<component :is="'style'" v-html="themeCss" />
+	<style v-html="themeCss"></style>
 	<div class="nav-sticky">
 		<header>
 			<div class="w-1100px mx-auto px-2 m_px-1 h-60px flex align-items-center space-between gap-2">
