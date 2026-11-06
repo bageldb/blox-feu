@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, h, ref } from 'vue'
 import { defineBlock, useGlobalBlock } from '@bagelink/blox'
 import { Btn, Icon, defineSchema, $ } from '@bagelink/vue'
 
@@ -55,10 +55,12 @@ const themeCss = computed(() => {
 	}
 	return ':root{' + Object.entries(vars).map(([k, v]) => `${k}:${v};`).join('') + '}'
 })
+
+const ThemeStyle = () => h('style', themeCss.value)
 </script>
 
 <template>
-	<style v-html="themeCss"></style>
+	<ThemeStyle />
 	<div class="nav-sticky">
 		<header>
 			<div class="w-1100px mx-auto px-2 m_px-1 h-60px flex align-items-center space-between gap-2">
